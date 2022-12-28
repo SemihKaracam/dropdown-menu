@@ -1,0 +1,112 @@
+<!DOCTYPE html>  <!--HTML kodunuzdaki ilk satır, doctype bildirimi olmalıdır. Doctype, tarayıcıya sayfanın hangi HTML sürümüyle yazıldığını söyler.  -->
+<!-- Bu kod satırını dosyanıza eklemeyi unutursanız, <article>, <footer> ve <header> gibi bazı HTML 5 etiketleri tarayıcı tarafından desteklenmeyebilir. -->
+
+
+
+<html lang="en"> <!-- <html> etiketi, HTML dosyasının en üst düzey elementidir. <head> ve <body> etiketlerini bunun içine yerleştireceksiniz. -->
+<!-- <html> etiketindeki lang niteliği, web'deki metin içeriğinin dilini tanımlamak için kullanılır. Bu bilgi, arama motorlarının dile özel sonuçlar döndürmesine yardımcı olur --> 
+<head>
+    <meta charset="UTF-8"> <!-- UTF-8, web sayfalarınızda kullanmanız gereken standart karakter kodlamasıdır. Bu genellikle <head> öğesinde gösterilen ilk <meta> etiketi olacaktır.-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Internet Explorer'a en yeni işleme motorunu kullanması talimatını vermek için kullanılan bir meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Bu etiket, sayfanın genişliğini cihazın ekran boyutunun genişliğine dönüştürür. Örneğin 600 piksel genişliğinde bir mobil cihazınız varsa, tarayıcı penceresi de 600 piksel genişliğinde olacaktır.Başlangıç ölçeği yakınlaştırma seviyesini kontrol eder. İlk ölçek için 1 değeri, tarayıcılar tarafından varsayılan yakınlaştırmayı engeller. -->
+    <!-- title etiketi, web sayfasının başlığıdır. Bu metin, tarayıcının başlık çubuğunda gösterilir -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;;
+        }
+        nav{
+            color: white;
+            max-width: 100%;
+            padding: 0px 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #242528;
+        }
+
+        ul{
+            list-style: none;
+        }
+        
+        ul li a{
+            text-decoration: none;
+            position: relative;
+            color: inherit;
+            padding: 20px;
+            display: block;
+        }
+
+
+        nav > ul{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        nav ul li {
+            position: relative;
+            background-color: #242528;
+        }
+        nav ul li ul{
+            display: none;
+            position: absolute;
+            left: 0px;
+            width: 200px;
+        }
+        nav ul li ul li{
+            width: 100%;
+            border-top: 1px solid #000;
+        }
+        nav ul li ul li ul{
+            top: 0;
+            left: 200px;
+        }
+        nav ul li:hover > ul{
+            display: block;
+        }
+
+     
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <h3 class="logo">LOGO</h4>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li><a href="#">About</a></li>
+            <li>
+                <a href="#">Pages +</a>
+                <ul>
+                    <li><a href="#">Blogs</a></li>
+                    <li>
+                        <a href="#">Services +</a>
+                        <ul>
+                            <li><a href="#">html</a></li>
+                            <li><a href="#">css</a></li>
+                            <li><a href="#">javascript</a></li>
+                        </ul>
+                    </li>
+                </ul>            
+            </li>
+            <li><a href="#">Review</a></li>
+            <li>
+                <a href="#">Gallery +</a>
+                <ul>
+                    <li><a href="#">grid gallery</a></li>
+                    <li><a href="#">flex gallery</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
